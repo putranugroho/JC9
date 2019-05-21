@@ -1,0 +1,47 @@
+p {
+    background-color : slateblue
+}
+
+/* .className*/
+.orange{
+    color : orange
+}
+
+/* #IDname */
+#single{
+    color : rgb(200, 0, 0, 0.8)
+    /* Red, Green, Blue, Transparancy 0 ~ 1 ( 0 : hilang | 1 : terlihat jelas ) */
+}
+
+#double{
+    background: linear-gradient(rgb(255, 255, 0), rgb(0, 255, 255))
+}
+
+/* [Attribute] */
+input[type=text]{
+    border : 3px solid red
+}
+
+div{
+    background: url(../Pictures/madrid.png);
+    background-size: 400px 200px
+}
+
+/* merubah TAG p yang dibungkus dalam div*/
+div p {
+    color: black;
+    width: 50%
+}
+
+/*semua element yang memiliki id #typo yang berada dalam TAG p*/
+p#typo{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    line-height: 5px;
+    letter-spacing: 5px;
+    text-align: center
+}
+

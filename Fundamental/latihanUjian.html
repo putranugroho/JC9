@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan Ujian</title>
+    <script defer src="./latihanUjian.js"></script>
+    <style>
+        table, th, td, tr, thead {
+            border: 2px solid rgb(0, 89, 255) ;
+            border-collapse: collapse
+        }
+        th, td {
+            padding: 7px
+        }
+    </style>
+</head>
+<body>
+<center>
+<table>
+    <thead>
+        <tr>
+        <th>From Manusia</th>
+        <th>Form Hewan</th>
+        </tr>
+        <tr></tr>
+            <td>
+                <form action="formManusia">
+                    <p>Nama : <input type="text" id="name"></p>
+                    <p>Umur : <input type="number" id="age">
+                    <p>
+                    Kelamin : <input type="radio" name="gender" value="Pria">Pria
+                              <input type="radio" name="gender" value="Wanita">Wanita
+                    </p>
+                    <p>
+                    Pekerjaan : <select name="job" id="job">
+                                <option value="Dokter">Dokter</option>
+                                <option value="Pembalap">Pembalap</option>
+                                <option value="PNS">PNS</option>
+                                </select>
+                    </p>
+                    <input type="button" value="Tambahkan" onclick="funManusia()">
+                </form>
+            </td>
+            <td>
+                <form action="formHewan">
+                    <p>Nama : <input type="text" id="name2"></p>
+                    <p>Umur : <input type="number" id="age2">
+                    <p>
+                    Kelamin : <input type="radio" name="gender2" value="Pria">Pria
+                              <input type="radio" name="gender2" value="Wanita">Wanita
+                    </p>
+                    <p>
+                    Status : <input type="radio" name="status" value="Liar">Liar
+                             <input type="radio" name="status" value="Peliharaan">Peliharaan
+                    </p>
+                    <input type="button" value="Tambahkan" onclick="funHewan()">
+                </form>
+            </td>
+    </thead>    
+</table>
+</center>   
+    <br><br>
+<center>
+<Table>
+    <thead>
+        <tr>
+        <th>Data Manusia</th>
+        <th>Data hewan</th>
+        </tr>
+        <tr>
+            <td>
+            <table id='tableManusia'>
+                <thead>
+                <tr>
+                    <td>Nama</td>
+                    <td>Umur</td>
+                    <td>Kelamin</td>
+                    <td>Pekerjaan</td>
+                </tr>
+                </thead>
+                <tbody id="hasil">
+                </tbody>
+            </table>    
+            </td>
+            <td>
+            <table>
+                <thead>
+                <tr>
+                    <td>Nama</td>
+                    <td>Umur</td>
+                    <td>Kelamin</td>
+                    <td>Status</td>
+                </tr>
+                </thead>
+                <tbody id="hasil2">
+
+                </tbody>
+            </table>
+            </td>
+    </tr>
+</thead>
+</Table>
+</center>
+</body>
+</html>

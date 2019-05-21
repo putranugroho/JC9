@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- <script defer src="./index.js"></script> -->
+
+</head>
+<body>
+    <form id="form">
+        <p>Name : <input type="text" id="name"></p>
+        <p>Age : <input type="text" id="age"></p>
+        <p>
+        Gender : <input type="radio" name="gender" value="Laki-Laki">Pria
+                 <input type="radio" name="gender" value="Perempuan">Wanita
+        </p>
+        <p>
+        Status : <input type="checkbox" name='status' value="Kuliah">Kuliah
+                 <input type="checkbox" name='status' value="Kerja">Kerja
+        </p>
+        <p>
+        Skill :  <input type="checkbox" name='skill' value="HTML">HTML
+                 <input type="checkbox" name='skill' value="CSS">CSS
+                 <input type="checkbox" name='skill' value="Javascript">Javascript
+        </p>
+        <br>
+    </form>
+    <button onclick="fungsi()"> Coba Klik ! </button>
+    <p id="tes"> Hasil </p>
+
+    <SCript>
+        var fungsi = () => {
+
+            //cara jalan ngambil value
+            var form = document.getElementById('form')
+            var input = form[0]
+            var value = input.value
+            
+            //cara cepat ngambil value
+            var nama = document.getElementById('name').value
+            var usia = document.getElementById('age').value
+            
+
+            var radio = document.getElementsByName('gender')
+            var radioValue = ''
+            // Check radio pakai FOR
+            for (let i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    radioValue = radio[i].value
+                }
+            }
+            // Check radio pakai IF/ELSE
+            // if (radio[0].checked == true) {
+            //     radioValue = radio[0].value
+            // } else {
+            //     radioValue = radio[1].value
+            // }
+            
+
+            // Checked Boxes
+            var checkStatus = document.getElementsByName('status')
+            var status = []
+
+            for (let j = 0; j < checkStatus.length; j++) {                
+                if (checkStatus[j].checked == true) {
+                   status.push(checkStatus[j].value)
+               }
+            }
+            
+            if (status.length == 1) {
+                status = `Sedang ${status[0]}`
+            } else {
+                status = `${status.join(' sambil ')}`
+            }
+
+            var checkSkill = document.getElementsByName('skill')
+            var skill = []
+            
+            for (let i = 0; i < checkSkill.length; i++) {                
+                if (checkSkill[i].checked==true) {
+                   skill.push(checkSkill[i].value)
+               }
+            }
+
+
+            document.getElementById('tes').innerHTML = `<b>Nama : </b>${nama}<br>Usia : ${usia}<br>Gender : ${radioValue}<br>Status : ${status}<br>Occupation : ${skill.join(', ')}`
+            
+        }
+        
+    </SCript>
+</body>
+</html>
